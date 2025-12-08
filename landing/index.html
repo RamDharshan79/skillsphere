@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en" data-theme="dark">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SkillSphere</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet" />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <header class="glass-header">
+      <nav class="nav-container">
+        <div class="logo">Skill<span class="accent">Sphere</span></div>
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#why">Why</a></li>
+          <li><a href="#domains">Domains</a></li>
+          <li><a href="#courses">Courses</a></li>
+          <li><a href="#impact">Impact</a></li>
+          <li><a href="#partners">Partners</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <button class="cta-button">Get Guidance</button>
+          <button class="theme-toggle" aria-label="Toggle theme"><i class="fas fa-moon"></i></button>
+          <button class="mobile-menu-toggle" aria-label="Open menu">☰</button>
+        </div>
+      </nav>
+    </header>
+
+    <main id="home">
+      <section class="hero">
+        <div class="container hero-grid">
+          <div class="hero-content">
+            <h1>Clarity in a world of endless courses</h1>
+            <p>Curated, verified, and guided learning for everyone — especially rural and low‑income learners.</p>
+            <form class="search-form" aria-label="Course search">
+              <input type="text" placeholder="What do you want to learn?" aria-label="Search" />
+              <select class="domain-select" aria-label="Domain">
+                <option>All Domains</option>
+                <option>Technology & Computer Science</option>
+                <option>Commerce & Business</option>
+                <option>Arts & Humanities</option>
+                <option>Design & Creative Fields</option>
+                <option>Science</option>
+                <option>Skill-Based & Vocational</option>
+              </select>
+              <select class="level-select" aria-label="Level">
+                <option>Any Level</option>
+                <option>Beginner</option>
+                <option>Intermediate</option>
+                <option>Advanced</option>
+              </select>
+              <label class="certificate-checkbox">
+                <input type="checkbox" aria-label="Certificate available" />
+                <span>Certificate</span>
+              </label>
+              <button type="submit" class="primary-button">Search</button>
+            </form>
+            <div class="secondary-actions">
+              <a href="#courses" class="secondary-button">Browse curated tracks</a>
+              <a href="#why" class="text-link">Why SkillSphere?</a>
+            </div>
+          </div>
+          <div class="hero-illustration" aria-hidden="true">
+            <div class="shape shape-1"></div>
+            <div class="shape shape-2"></div>
+            <div class="shape shape-3"></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="why" class="section">
+        <div class="container">
+          <h2 class="section-title">Why SkillSphere</h2>
+          <div class="grid features-grid">
+            <div class="feature-card card reveal">
+              <div class="icon-chip"><i class="fas fa-search"></i></div>
+              <h3>Curated & Verified</h3>
+              <p>Every resource is hand‑picked and verified by experts.</p>
+            </div>
+            <div class="feature-card card reveal">
+              <div class="icon-chip"><i class="fas fa-globe"></i></div>
+              <h3>Accessible</h3>
+              <p>Free learning pathways for all backgrounds and regions.</p>
+            </div>
+            <div class="feature-card card reveal">
+              <div class="icon-chip"><i class="fas fa-hand-holding-heart"></i></div>
+              <h3>Mentor‑backed</h3>
+              <p>Reliable guidance and support throughout your journey.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section id="domains" class="section">
+        <div class="container">
+          <h2 class="section-title">Domains</h2>
+          <div class="grid domains-grid">
+            <div class="domain-card card reveal"><span class="accent-bar"></span><div>Technology & Computer Science</div></div>
+            <div class="domain-card card reveal"><span class="accent-bar"></span><div>Commerce & Business</div></div>
+            <div class="domain-card card reveal"><span class="accent-bar"></span><div>Arts & Humanities</div></div>
+            <div class="domain-card card reveal"><span class="accent-bar"></span><div>Design & Creative Fields</div></div>
+            <div class="domain-card card reveal"><span class="accent-bar"></span><div>Science</div></div>
+            <div class="domain-card card reveal"><span class="accent-bar"></span><div>Skill‑Based & Vocational</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="courses" class="section">
+        <div class="container">
+          <h2 class="section-title">Featured Courses</h2>
+          <div class="grid courses-grid">
+            <article class="course-card card reveal">
+              <div class="media-bar"></div>
+              <div class="meta"><span class="chip">Beginner</span><span class="chip">Technology</span></div>
+              <h3>Intro to Web Development</h3>
+              <p>Start building websites with HTML, CSS, and JavaScript.</p>
+              <div class="actions"><a class="inline-link" href="#">View course</a><span class="badge">Free</span></div>
+            </article>
+            <article class="course-card card reveal">
+              <div class="media-bar"></div>
+              <div class="meta"><span class="chip">Intermediate</span><span class="chip">Business</span></div>
+              <h3>Data‑Driven Marketing</h3>
+              <p>Leverage analytics to design better campaigns.</p>
+              <div class="actions"><a class="inline-link" href="#">View course</a><span class="badge">Free</span></div>
+            </article>
+            <article class="course-card card reveal">
+              <div class="media-bar"></div>
+              <div class="meta"><span class="chip">Advanced</span><span class="chip">Design</span></div>
+              <h3>Design Systems</h3>
+              <p>Build cohesive, scalable UI systems.</p>
+              <div class="actions"><a class="inline-link" href="#">View course</a><span class="badge">Free</span></div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="testimonials" class="section">
+        <div class="container">
+          <h2 class="section-title">Testimonials</h2>
+          <div class="grid testimonials-grid">
+            <div class="testimonial card reveal"><div class="stars">★★★★★</div><p>Clear, curated paths helped me finish my first project.</p><div class="author">Asha — Student</div></div>
+            <div class="testimonial card reveal"><div class="stars">★★★★★</div><p>Mentorship made all the difference in my learning journey.</p><div class="author">Rahul — Learner</div></div>
+            <div class="testimonial card reveal"><div class="stars">★★★★★</div><p>The guidance turned chaos into clarity.</p><div class="author">Meera — Beginner</div></div>
+          </div>
+        </div>
+      </section>
+
+      <section id="impact" class="section">
+        <div class="container stats">
+          <div class="stat-block reveal"><div class="number">92%</div><div class="label">finish beginner modules</div></div>
+          <div class="stat-block reveal"><div class="number">8×</div><div class="label">faster to first project</div></div>
+          <div class="stat-block reveal"><div class="number">40k+</div><div class="label">resources curated</div></div>
+        </div>
+      </section>
+
+      <section id="partners" class="section">
+        <div class="container">
+          <h2 class="section-title">Partners</h2>
+          <div class="partners-row">
+            <div class="partner">Partner A</div>
+            <div class="partner">Partner B</div>
+            <div class="partner">Partner C</div>
+            <div class="partner">Partner D</div>
+          </div>
+        </div>
+      </section>
+
+      <section class="cta-banner">
+        <div class="container cta-grid">
+          <h3>Ready to close the gap?</h3>
+          <button class="cta-button">Get Guidance</button>
+        </div>
+      </section>
+    </main>
+
+    <footer id="contact" class="footer">
+      <div class="container footer-grid">
+        <div class="brand">SkillSphere — A single home for every free learning resource.</div>
+        <div class="copy">© <span id="year"></span></div>
+      </div>
+    </footer>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
