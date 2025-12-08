@@ -60,7 +60,14 @@ export default function HomePage() {
       <Header onToggleTheme={() => setDark(v => !v)} />
       <SearchFilters filters={filters} onChange={setFilters} domains={domains} />
       <WhySection />
-      <DomainGrid domains={domains} onSelect={d => setFilters(f => ({ ...f, domain: d }))} />
+      <DomainGrid
+        domains={domains}
+        onSelect={d => {
+          setFilters(f => ({ ...f, domain: d }))
+          const el = document.getElementById('courses')
+          if (el) el.scrollIntoView({ behavior: 'smooth' })
+        }}
+      />
       <FeaturedCourseRow courses={featured} onOpen={setModalCourse} />
       <CourseList courses={courses} loading={loading} error={error} onOpen={setModalCourse} />
       <ImpactSection />

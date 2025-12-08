@@ -24,7 +24,7 @@ export default function Footer() {
         <div>
           <h4 className="font-semibold mb-3">Support</h4>
           <ul className="space-y-2 text-sm text-[#7a869a]">
-            <li><a href="#guidance" className="hover:text-[#c8a96a]">Guidance</a></li>
+            <li><Link href="/guidance" className="hover:text-[#c8a96a]">Guidance</Link></li>
             <li><a href="#community" className="hover:text-[#c8a96a]">Community</a></li>
             <li><a href="#faq" className="hover:text-[#c8a96a]">FAQ</a></li>
             <li><a href="#contact" className="hover:text-[#c8a96a]">Contact</a></li>
