@@ -4,9 +4,13 @@ import { mockCourses } from '../mockData.js'
 const USE_MOCK = true
 
 let db
-if (!USE_MOCK) {
-  const { db: firebaseDb } = await import('../firebaseAdmin.js')
-  db = firebaseDb
+// Lazy load Firebase only when needed
+async function getDb() {
+  if (!db && !USE_MOCK) {
+    const firebaseAdmin = await import('../firebaseAdmin.js')
+    db = firebaseAdmin.db
+  }
+  return db
 }
 
 function toCourse(doc) {

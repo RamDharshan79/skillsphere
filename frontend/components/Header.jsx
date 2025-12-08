@@ -19,9 +19,7 @@ export default function Header({ onToggleTheme }) {
           <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[hsl(38,92%,50%)] to-[hsl(195,86%,51%)] flex items-center justify-center">
             <span className="text-white font-bold text-xl">S</span>
           </div>
-          <h1 className="text-xl font-bold">
-            Skillsphere <span className="text-[hsl(38,92%,50%)]">Clarity</span>
-          </h1>
+          <h1 className="text-xl font-bold">Skillsphere</h1>
         </div>
         
         <nav className="hidden md:flex items-center gap-6">

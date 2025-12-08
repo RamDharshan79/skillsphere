@@ -1,19 +1,50 @@
 TITLE,DOMAIN,SUBDOMAIN,LEVEL,DURATION,URL
-Google Digital Marketing & E‑Commerce Certificate,COMMERCE,marketing,beginner,6 months,https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce
-Digital Marketing Specialization,COMMERCE,marketing,beginner,2 months,https://www.coursera.org/specializations/digital-marketing
-the Complete Digital Marketing,COMMERCE,marketing,beginner,3 months,https://www.coursera.org/learn/full-digital-marketing
-Certified Management Accountant (CMA),COMMERCE,accounting,intermediate,4 weeks,https://www.coursera.org/learn/capm-exam-prep
-Certified Public Accountant (CPA),COMMERCE,accounting,beginner,4 weeks,https://www.coursera.org/learn/capm-exam
-ACCA (Association of Chartered Certified Accountants),COMMERCE,accounting,intermediate,8 weeks,https://www.coursera.org/learn/acca
-Chartered Financial Analyst (CFA),COMMERCE,finance,beginner,4 weeks,https://www.coursera.org/specializations/financial-analysis-skills-success
-Financial Risk Manager (FRM),COMMERCE,finance,advanced,6 weeks,https://www.coursera.org/learn/banking-financial-markets
-Financial Modeling & Valuation Analyst (FMVA),COMMERCE,finance,advanced,12 weeks,https://www.coursera.org/learn/advanced-financial-analytics
-practical guide of trading,COMMERCE,stock market basics,beginner,4 weeks,https://www.coursera.org/specializations/financial-instruments-trading-investing
-trading basics,COMMERCE,stock market basics,beginner,8 hours,https://www.coursera.org/learn/trading-basics
-construct stock market indices,COMMERCE,stock market basics,advanced,2 hours,https://www.coursera.org/projects/construct-stock-market-indices
-business analytics with excel,COMMERCE,business analytics,intermediate,2 weeks,https://www.coursera.org/learn/business-analytics-excel
-business intelligence and analytics,COMMERCE,business analytics,advanced,12 weeks,https://www.coursera.org/learn/business-intelligence-analytics
-fundamentals of business analytics,COMMERCE,business analytics,beginner,8 weeks,https://www.coursera.org/learn/fundamentals-business-analytics
-Human Resource Management: HR for People Managers Specialization,COMMERCE,HR and entrepreneurship,beginner,2 months,https://www.coursera.org/specializations/human-resource-management
-Startup Entrepreneurship Specialization,COMMERCE,HR and entrepreneurship,beginner,2 months,https://www.coursera.org/specializations/startup-entrepreneurship
-HR Analytics,COMMERCE,HR and entrepreneurship,advanced,6 weeks,https://onlinecourses.swayam2.ac.in/imb26_mg53/preview
+COMMERCE,marketing,Google Digital Marketing & E?Commerce Certificate,beginner ,6 months,https://www.coursera.org/professional-certificates/google-digital-marketing-ecommerce
+,,Digital Marketing Specialization,beginner ,2 months,https://www.coursera.org/specializations/ai-marketing-mastery
+,,the Complete Digital Marketing,beginner ,3 months,https://www.coursera.org/specializations/digital-marketing-certification-course
+,accounting,Certified Management Accountant (CMA),intermediate,4 weeks,https://www.coursera.org/specializations/packt-certified-associate-in-project-management-capm
+,,Certified Public Accountant (CPA),beginner ,4 weeks,https://www.coursera.org/specializations/pearson-certified-associate-in-project-management-capm-exam
+,,ACCA (Association of Chartered Certified Accountants),,,
+,finance,Chartered Financial Analyst (CFA),beginner ,4 weeks,https://www.coursera.org/specializations/financial-analysis-skills-for-success
+,,Financial Risk Manager (FRM),advance,6 weeks,https://onlinecourses.swayam2.ac.in/imb26_mg02/preview
+,,Financial Modeling & Valuation Analyst (FMVA),advance,12 weeks,https://onlinecourses.nptel.ac.in/noc26_mg22/preview
+,stock market basics,practical guide of trading ,beginner ,4 weeks,https://www.coursera.org/specializations/financial-instruments-trading-investing
+,,trading basics,beginner ,8 hours,https://www.coursera.org/learn/trading-basics
+,,construct stock market indices,advance,2 hours ,https://www.coursera.org/projects/construct-stock-market-indices
+,business analytics,business analytics with excel,intermediate,2 weeks ,https://www.coursera.org/learn/business-analytics-excel
+,,business intelligence and analytics,advance,12 weeks,https://onlinecourses.nptel.ac.in/noc26_cs64/preview
+,,fundamentals of business analytics,beginner ,8 weeks,https://onlinecourses.swayam2.ac.in/ntr26_ed45/preview
+,HR and entrepreneurshipHuman Resource Management: HR for People Managers Specialization,,beginner ,2 months,https://www.coursera.org/specializations/human-resource-management
+,,Startup Entrepreneurship Specialization,beginner ,2 months,https://www.coursera.org/specializations/startup-entrepreneurship
+,,HR Analytics,advance,6 weeks,https://onlinecourses.swayam2.ac.in/imb26_mg53/preview
+,,,,,
+TECHNOLOGY AND DEVELOPMENT ,WEB DEVELOPMENT ,full stack development,beginner ,8 months ,https://www.coursera.org/specializations/meta-full-stack-developer
+,,Django for Everybody Specialization,intermediate,2months,https://www.coursera.org/specializations/Django
+,,Front-End Web Developer,advance,26weeks,https://www.edx.org/certificates/professional-certificate/w3cx-front-end-web-developer?index=rv_product_summary&queryId=b6e8eca32b5107ff8d06df902821c0f1&position
+,AI/ML,Introduction to Machine Learning,beginner,12weeks,https://onlinecourses.nptel.ac.in/noc26_cs74/preview?utm
+,,AI/ML using Python,intermediate,36hrs,https://swayam-plus.swayam2.ac.in/courses/course-details?id=P_IITMPR_089
+,,.Deep Learning,advance,12weeks,https://onlinecourses.nptel.ac.in/noc25_cs106/preview?utm_source
+,DATA SCIENCE,.Data Science Introductory,beginner ,12hrs,https://www.skillschool.co.in/courses/free-data-science-certification-training
+,,Python for Data Science,intermediate,3hrs,https://www.mygreatlearning.com/academy/learn-for-free/courses/python-for-data-science
+,,Data Science and Big Data,advance,12hrs,https://www.classcentral.com/course/swayam-mcs-226-data-science-and-big-data-389402?utm
+,CYBERSECUIRITY,Introduction to Cyber Security,beginner,2hrs,https://www.simplilearn.com/learn-cyber-security-basics-skillup
+,,AI for Cybersecurity Specialization,intermediate,6hrs,https://www.coursera.org/specializations/ai-for-cybersecurity
+,,IBM Cybersecurity Analyst Professional Certificate,advance,12hrs,https://www.coursera.org/professional-certificates/ibm-cybersecurity-analyst
+,CLOUD COMPUTTING,Introduction to Cloud Computing,beginner,2hrs,https://www.simplilearn.com/introduction-to-cloud-computing-basics-skillup
+,,Cloud Security Practices,intermediate,3hrs,https://www.mygreatlearning.com/academy/premium/cloud-security-practices?gl_campaign=web_desktop_gla_search_page_loggedout_pro_course_card_section
+,,Cloud Computing Service Models,advance,6hrs,https://www.mygreatlearning.com/academy/learn-for-free/courses/cloud-computing-service-models
+,,Artificial Intelligence on Cloud,advance,12hrs,https://www.mygreatlearning.com/academy/learn-for-free/courses/ai-on-cloud
+,,,,,
+,,,,,
+,psychology,introductipon to psycology,beginner ,7 days,https://www.coursera.org/learn/introduction-psychology
+,,basics of mental health and clinical psycology,intermediate,8 weeks,https://onlinecourses.nptel.ac.in/noc23_ge19/preview
+,,Harvard :fundamentals of neurology,advance,5 weeks,https://www.edx.org/learn/neuroscience/harvard-university-fundamentals-of-neuroscience-part-1-the-electrical-properties-of-the-neuron
+,sociology,intoduction to sociology,beginner ,2 weeks ,https://alison.com/course/basics-of-sociology
+,,modern social theory,intermediate,1 week,https://cursa.app/free-courses-sociology-online
+,,sociology,advance,3 weeks,https://learn.saylor.org/course/index.php?categoryid=24
+,graphic designing,fundamentals of graphic designing,beginner ,1 week,https://www.coursera.org/learn/fundamentals-of-graphic-design
+,,graphic design specialisation,intermediate,8 weeks,https://www.coursera.org/specializations/graphic-design
+,,advance graphic design,advance,6 weeks,https://www.udemy.com/course/professional-logo-design-crash-course/
+,video editing,video editing basics,beginner ,1 week,Free Cybersecurity Online Course with Certificate 2025 - SkillSchool
+,,video editing catalog,intermediate,2 weeks ,https://www.udemy.com/course/adobe-premiere-pro-masterclass/
+,,professional video editing,advance,1 week,https://www.udemy.com/course/professional-video-editing/

@@ -8,7 +8,17 @@ import adminRoutes from './routes/adminRoutes.js'
 const app = express()
 
 const corsOrigin = process.env.FRONTEND_ORIGIN || 'http://localhost:3000'
-app.use(cors({ origin: corsOrigin }))
+// Allow multiple origins for development
+const allowedOrigins = [corsOrigin, 'http://localhost:3000', 'http://localhost:3001', 'http://localhost:3002']
+app.use(cors({ 
+  origin: (origin, callback) => {
+    if (!origin || allowedOrigins.includes(origin)) {
+      callback(null, true)
+    } else {
+      callback(new Error('Not allowed by CORS'))
+    }
+  }
+}))
 app.use(express.json())
 
 app.use('/api', coursesRoutes)
