@@ -9,7 +9,7 @@ export default function CourseDetailModal({ course, onClose }) {
           <button className="px-2 py-1 border rounded" onClick={onClose}>Close</button>
         </div>
         <div className="space-y-1 text-sm">
-          <div>Platform: {course.platformName}</div>
+          <div>Provider: {course.provider}</div>
           <div>Domain: {course.domain}</div>
           {course.subdomain ? <div>Subdomain: {course.subdomain}</div> : null}
           <div>Level: {course.level}</div>
@@ -17,7 +17,7 @@ export default function CourseDetailModal({ course, onClose }) {
           <div>Certificate: {course.certificateAvailable ? 'Yes' : 'No'}</div>
         </div>
         <a
-          href={course.courseURL}
+          href={course.url}
           target="_blank"
           rel="noopener noreferrer"
           className="mt-4 inline-block px-3 py-2 border rounded"
