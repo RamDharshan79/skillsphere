@@ -8,7 +8,7 @@ export async function getCourses(params = {}) {
   if (params.search) q.set('search', params.search)
   if (params.domain) q.set('domain', params.domain)
   if (params.level) q.set('level', params.level)
-  if (typeof params.certificateAvailable === 'boolean') q.set('certificateAvailable', String(params.certificateAvailable))
+  if (params.certificateAvailable === true) q.set('certificateAvailable', 'true')
   const res = await fetch(`${BASE_URL}/api/courses?${q.toString()}`)
   if (!res.ok) throw new Error('Failed to load courses')
   return res.json()

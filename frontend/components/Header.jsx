@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react'
+import Link from 'next/link'
+import LogoSphere from './LogoSphere'
 
 export default function Header({ onToggleTheme }) {
   const [scrolled, setScrolled] = useState(false)
@@ -15,12 +17,10 @@ export default function Header({ onToggleTheme }) {
   return (
     <header className={`sticky top-0 z-50 px-6 py-4 transition-all duration-300 ${scrolled ? 'header-scroll' : 'bg-transparent'}`}>
       <div className="max-w-7xl mx-auto flex items-center justify-between">
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-gradient-to-br from-[hsl(38,92%,50%)] to-[hsl(195,86%,51%)] flex items-center justify-center">
-            <span className="text-white font-bold text-xl">S</span>
-          </div>
+        <Link href="/" aria-label="Go to homepage" className="flex items-center gap-3">
+          <LogoSphere size={40} />
           <h1 className="text-xl font-bold">Skillsphere</h1>
-        </div>
+        </Link>
         
         <nav className="hidden md:flex items-center gap-6">
           <div className="relative">
@@ -45,7 +45,7 @@ export default function Header({ onToggleTheme }) {
           >
             🌓
           </button>
-          <button className="btn-outline text-sm px-4 py-2">Log In</button>
+          <a href="/login" className="btn-outline text-sm px-4 py-2">Log In</a>
           <button className="btn-primary text-sm">Get Guidance</button>
         </nav>
 

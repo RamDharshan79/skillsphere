@@ -1,9 +1,15 @@
+import LogoSphere from './LogoSphere'
+import Link from 'next/link'
+
 export default function Footer() {
   return (
     <footer id="contact" className="mt-20 border-t border-[#c8a96a]/20">
       <div className="max-w-7xl mx-auto px-6 py-12 grid grid-cols-1 md:grid-cols-4 gap-8">
         <div>
-          <h3 className="text-2xl font-bold">Skill<span className="text-[#c8a96a]">Sphere</span></h3>
+          <Link href="/" aria-label="Go to homepage" className="flex items-center gap-3">
+            <LogoSphere size={36} />
+            <h3 className="text-2xl font-bold">Skill<span className="text-[#c8a96a]">Sphere</span></h3>
+          </Link>
           <p className="mt-2 text-sm text-[#7a869a]">We curate, verify, and guide learners along trusted paths.</p>
         </div>
         <div>

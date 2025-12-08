@@ -12,7 +12,7 @@ import Footer from '../components/Footer'
 
 export default function HomePage() {
   const [dark, setDark] = useState(false)
-  const [filters, setFilters] = useState({ search: '', domain: undefined, level: undefined, certificateAvailable: false })
+  const [filters, setFilters] = useState({ search: '', domain: undefined, level: undefined })
   const [domains, setDomains] = useState([])
   const [featured, setFeatured] = useState([])
   const [courses, setCourses] = useState([])
@@ -53,7 +53,7 @@ export default function HomePage() {
         setError('Failed')
       })
       .finally(() => setLoading(false))
-  }, [filters.search, filters.domain, filters.level, filters.certificateAvailable])
+  }, [filters.search, filters.domain, filters.level])
 
   return (
     <div className="min-h-screen">

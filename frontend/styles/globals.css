@@ -20,8 +20,8 @@
   .dark {
     --background: 222 84% 4.9%;
     --foreground: 210 40% 98%;
-    --primary: 210 40% 98%;
-    --primary-foreground: 222 47% 11.2%;
+    --primary: 38 92% 50%;
+    --primary-foreground: 0 0% 10%;
     --accent: 195 86% 51%;
     --card: 222 47% 11.2%;
     --card-foreground: 210 40% 98%;
@@ -93,6 +93,32 @@ h1, h2, h3, h4, h5, h6 {
 .btn-outline:hover {
   background: hsla(var(--primary), 0.1);
 }
+
+.chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
+  padding: 0.35rem 0.75rem;
+  border: 1px solid hsl(var(--border));
+  border-radius: var(--radius);
+  font-size: 0.85rem;
+  color: hsl(var(--foreground));
+  background: hsl(var(--card));
+  transition: all 0.2s ease;
+}
+
+.chip:hover { border-color: hsl(var(--primary)); }
+
+.chip-active {
+  border-color: hsl(var(--primary));
+  box-shadow: 0 0 0 2px hsla(var(--primary), 0.15) inset;
+}
+
+.logo-sphere { filter: drop-shadow(0 4px 10px rgba(200,169,106,.18)); }
+.dark .logo-sphere { filter: drop-shadow(0 6px 14px rgba(200,169,106,.28)); }
+
+.logo-sphere { filter: drop-shadow(0 4px 10px rgba(200,169,106,.18)); }
+.dark .logo-sphere { filter: drop-shadow(0 6px 14px rgba(200,169,106,.28)); }
 
 .accent-bar {
   border-left: 4px solid hsl(var(--primary));

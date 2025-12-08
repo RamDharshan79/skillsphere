@@ -1,4 +1,5 @@
 const LEVELS = ['Beginner', 'Intermediate', 'Advanced']
+import LogoSphere from './LogoSphere'
 
 export default function SearchFilters({ filters, onChange, domains }) {
   return (
@@ -22,46 +23,34 @@ export default function SearchFilters({ filters, onChange, domains }) {
           </p>
         </div>
         
-        <div className="glass-card rounded-2xl p-8 max-w-4xl mx-auto space-y-4">
-          <input
-            type="text"
-            value={filters.search}
-            onChange={e => onChange({ ...filters, search: e.target.value })}
-            placeholder="Search courses, skills, or topics..."
-            className="w-full px-5 py-4 rounded-xl bg-background border-2 border-border focus:border-[hsl(38,92%,50%)] focus:outline-none transition-colors"
-          />
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-4">
-            <select
-              value={filters.domain || ''}
-              onChange={e => onChange({ ...filters, domain: e.target.value || undefined })}
-              className="px-5 py-4 rounded-xl bg-background border-2 border-border focus:border-[hsl(38,92%,50%)] focus:outline-none transition-colors"
-            >
-              <option value="">All Domains</option>
-              {domains.map(d => (
-                <option key={d} value={d}>{d}</option>
-              ))}
-            </select>
-            <select
-              value={filters.level || ''}
-              onChange={e => onChange({ ...filters, level: e.target.value || undefined })}
-              className="px-5 py-4 rounded-xl bg-background border-2 border-border focus:border-[hsl(38,92%,50%)] focus:outline-none transition-colors"
-            >
-              <option value="">All Levels</option>
-              {LEVELS.map(l => (
-                <option key={l} value={l}>{l}</option>
-              ))}
-            </select>
-            <label className="flex items-center gap-3 px-5 py-4 rounded-xl bg-background border-2 border-border cursor-pointer hover:border-[hsl(38,92%,50%)] transition-colors">
-              <input
-                type="checkbox"
-                checked={filters.certificateAvailable || false}
-                onChange={e => onChange({ ...filters, certificateAvailable: e.target.checked })}
-                className="w-5 h-5 accent-[hsl(38,92%,50%)]"
-              />
-              <span className="text-sm font-medium">Certificate</span>
-            </label>
+        <div className="glass-card rounded-2xl p-8 max-w-4xl mx-auto space-y-5">
+          <div className="relative">
+            <div className="absolute left-4 top-1/2 -translate-y-1/2">
+              <LogoSphere size={24} />
+            </div>
+            <input
+              type="text"
+              value={filters.search}
+              onChange={e => onChange({ ...filters, search: e.target.value })}
+              onKeyDown={e => { if (e.key === 'Enter') { e.preventDefault(); document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' }) } }}
+              placeholder="Search courses, skills, or topics..."
+              className="w-full pl-12 pr-5 py-4 rounded-xl bg-background border-2 border-border focus:border-[hsl(38,92%,50%)] focus:outline-none transition-colors"
+              aria-label="Search courses"
+            />
           </div>
-          <button className="btn-primary w-full text-lg py-4">Search Courses →</button>
+          
+          <div className="flex flex-wrap items-center gap-3">
+            {domains.slice(0, 8).map(d => (
+              <button
+                key={d}
+                className={`chip ${filters.domain === d ? 'chip-active' : ''}`}
+                onClick={() => onChange({ ...filters, domain: filters.domain === d ? undefined : d })}
+                type="button"
+                aria-pressed={filters.domain === d}
+              >{d}</button>
+            ))}
+          </div>
+          <button className="btn-primary w-full text-lg py-4" onClick={() => document.getElementById('courses')?.scrollIntoView({ behavior: 'smooth' })}>Search Courses →</button>
         </div>
       </div>
     </section>
