@@ -38,18 +38,18 @@ router.post('/upload-courses-csv', requireAdmin, express.text({ type: [ 'text/cs
     for (const r of rows) {
       const course = {
         title: r.title || '',
-        provider: r.provider || '',
+        platformName: (r.provider || r.platformName || '').trim(),
         domain: r.domain || '',
         subdomain: r.subdomain || '',
         level: r.level || '',
         duration: r.duration || '',
         certificateAvailable: String(r.certificateAvailable).toLowerCase() === 'true',
-        url: r.url || '',
+        courseURL: (r.url || r.courseURL || '').trim(),
         isTopThisWeek: String(r.isTopThisWeek).toLowerCase() === 'true',
         updatedAt: r.updatedAt ? new Date(r.updatedAt) : new Date()
       }
-      if (!course.url) continue
-      const id = computeDocId(course.url)
+      if (!course.courseURL) continue
+      const id = computeDocId(course.courseURL)
       await db.collection('courses').doc(id).set(course, { merge: true })
       count++
     }

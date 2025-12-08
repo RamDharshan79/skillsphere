@@ -1,30 +1,58 @@
-// BEGIN CUSTOMIZABLE SECTION (styles)
 export default function CourseDetailModal({ course, onClose }) {
   if (!course) return null
+  
   return (
-    <div className="fixed inset-0 bg-black/40 flex items-center justify-center">
-      <div className="bg-white dark:bg-gray-800 w-full max-w-lg p-6 rounded shadow">
-        <div className="flex justify-between items-center mb-4">
-          <h3 className="text-lg font-semibold">{course.title}</h3>
-          <button className="px-2 py-1 border rounded" onClick={onClose}>Close</button>
+    <div className="fixed inset-0 bg-black/70 backdrop-blur-sm flex items-center justify-center z-50 p-4" onClick={onClose}>
+      <div className="glass w-full max-w-2xl rounded-2xl p-8 shadow-2xl" onClick={e => e.stopPropagation()}>
+        <div className="flex justify-between items-start mb-6">
+          <div className="flex-1">
+            <h3 className="text-2xl font-bold mb-2">{course.title}</h3>
+            <p className="text-[#c8a96a]">{course.platformName}</p>
+          </div>
+          <button 
+            className="text-[#7a869a] hover:text-[#f7f5ef] transition-colors ml-4"
+            onClick={onClose}
+          >
+            <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+            </svg>
+          </button>
         </div>
-        <div className="space-y-1 text-sm">
-          <div>Provider: {course.provider}</div>
-          <div>Domain: {course.domain}</div>
-          {course.subdomain ? <div>Subdomain: {course.subdomain}</div> : null}
-          <div>Level: {course.level}</div>
-          <div>Duration: {course.duration}</div>
-          <div>Certificate: {course.certificateAvailable ? 'Yes' : 'No'}</div>
+        
+        <div className="h-2 w-full rounded-full bg-gradient-to-r from-[#c8a96a] to-[#203a5c] mb-6"></div>
+        
+        <div className="grid grid-cols-2 gap-4 mb-6">
+          <div className="bg-white/5 rounded-lg p-4">
+            <p className="text-xs text-[#7a869a] mb-1">Domain</p>
+            <p className="font-medium">{course.domain}</p>
+          </div>
+          {course.subdomain && (
+            <div className="bg-white/5 rounded-lg p-4">
+              <p className="text-xs text-[#7a869a] mb-1">Subdomain</p>
+              <p className="font-medium">{course.subdomain}</p>
+            </div>
+          )}
+          <div className="bg-white/5 rounded-lg p-4">
+            <p className="text-xs text-[#7a869a] mb-1">Level</p>
+            <p className="font-medium">{course.level}</p>
+          </div>
+          <div className="bg-white/5 rounded-lg p-4">
+            <p className="text-xs text-[#7a869a] mb-1">Duration</p>
+            <p className="font-medium">{course.duration}</p>
+          </div>
+          <div className="bg-white/5 rounded-lg p-4">
+            <p className="text-xs text-[#7a869a] mb-1">Certificate</p>
+            <p className="font-medium">{course.certificateAvailable ? '✓ Available' : '✗ Not Available'}</p>
+          </div>
         </div>
+        
         <a
-          href={course.url}
+          href={course.courseURL}
           target="_blank"
           rel="noopener noreferrer"
-          className="mt-4 inline-block px-3 py-2 border rounded"
-        >Start Learning (Redirect)</a>
+          className="btn-primary w-full text-center block"
+        >Start Learning Now →</a>
       </div>
     </div>
   )
 }
-// TODO: customize styles here
-// END CUSTOMIZABLE SECTION

@@ -3,7 +3,7 @@
 // TODO: import data from Google Sheets and push into Firestore
 import { useEffect, useState } from 'react'
 import { firestore } from '../lib/firebaseConfig'
-import { collection, onSnapshot, query } from 'firebase/firestore'
+import { collection, getDocs, query } from 'firebase/firestore'
 
 export function useCourses() {
   const [courses, setCourses] = useState([])
@@ -17,18 +17,13 @@ export function useCourses() {
       return
     }
     const q = query(collection(firestore, 'courses'))
-    const unsub = onSnapshot(q, {
-      next: snap => {
+    getDocs(q)
+      .then(snap => {
         const list = snap.docs.map(d => ({ id: d.id, ...d.data() }))
         setCourses(list)
-        setLoading(false)
-      },
-      error: () => {
-        setError('Failed to load courses')
-        setLoading(false)
-      }
-    })
-    return () => unsub()
+      })
+      .catch(() => setError('Failed to load courses'))
+      .finally(() => setLoading(false))
   }, [])
 
   return { courses, loading, error }

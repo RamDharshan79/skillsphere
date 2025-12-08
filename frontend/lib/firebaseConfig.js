@@ -2,7 +2,7 @@
 // Configure Firebase Web SDK here. DO NOT hardcode secrets.
 // Put keys in frontend/.env.local as NEXT_PUBLIC_FIREBASE_*
 import { initializeApp, getApps, getApp } from 'firebase/app'
-import { getFirestore } from 'firebase/firestore'
+import { getFirestore, initializeFirestore } from 'firebase/firestore'
 
 const firebaseConfig = {
   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
@@ -22,5 +22,13 @@ if (isConfigured) {
 }
 
 export const app = appInstance
-export const firestore = appInstance ? getFirestore(appInstance) : null
+let fs = null
+if (appInstance) {
+  try {
+    fs = initializeFirestore(appInstance, { experimentalForceLongPolling: true })
+  } catch (e) {
+    fs = getFirestore(appInstance)
+  }
+}
+export const firestore = fs
 // END CUSTOMIZABLE SECTION
