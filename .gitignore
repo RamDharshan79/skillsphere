@@ -10,3 +10,4 @@ frontend/.vercel/
 
 backend/.env
 backend/.env*
+skillsphere-firestore-import/
