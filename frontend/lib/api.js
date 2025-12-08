@@ -1,4 +1,7 @@
-const BASE_URL = process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:4000'
+// Use relative URLs in production, localhost in development
+const BASE_URL = process.env.NODE_ENV === 'production' 
+  ? '' 
+  : (process.env.NEXT_PUBLIC_API_BASE_URL || 'http://localhost:4000')
 
 export async function getCourses(params = {}) {
   const q = new URLSearchParams()
@@ -12,7 +15,7 @@ export async function getCourses(params = {}) {
 }
 
 export async function getFeaturedCourses() {
-  const res = await fetch(`${BASE_URL}/api/courses/featured`)
+  const res = await fetch(`${BASE_URL}/api/featured`)
   if (!res.ok) throw new Error('Failed to load featured courses')
   return res.json()
 }
