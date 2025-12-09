@@ -27,7 +27,7 @@ export default function CourseCard({ course, onOpen }) {
         >Start Learning</a>
         <button 
           type="button"
-          className="btn-outline text-sm px-4 flex items-center gap-2"
+          className="btn-outline flex-1 text-center text-sm flex items-center justify-center gap-2"
           aria-label="View details"
           onClick={() => onOpen?.(course)}
         >
