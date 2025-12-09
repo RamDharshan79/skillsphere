@@ -26,9 +26,16 @@ export default function CourseCard({ course, onOpen }) {
           className="btn-primary flex-1 text-center text-sm"
         >Start Learning</a>
         <button 
-          className="btn-outline text-sm px-4"
-          onClick={() => onOpen(course)}
-        >Info</button>
+          type="button"
+          className="btn-outline text-sm px-4 flex items-center gap-2"
+          aria-label="View details"
+          onClick={() => onOpen?.(course)}
+        >
+          <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M13 16h-1v-4h1m-1-4h.01M12 2a10 10 0 100 20 10 10 0 000-20z" />
+          </svg>
+          <span>View Details</span>
+        </button>
       </div>
     </div>
   )
